@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author m16yusuf
+ * @author LimitMax
  */
 public class editAdmin extends javax.swing.JFrame {
 

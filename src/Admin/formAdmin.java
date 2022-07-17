@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author m16yusuf
+ * @author LimitMax
  */
 public class formAdmin extends javax.swing.JInternalFrame {
     

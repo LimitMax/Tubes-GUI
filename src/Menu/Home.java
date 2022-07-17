@@ -9,7 +9,7 @@ import java.awt.Dimension;
 
 /**
  *
- * @author ZUP_92
+ * @author LimitMax
  */
 public class Home extends javax.swing.JFrame {
 

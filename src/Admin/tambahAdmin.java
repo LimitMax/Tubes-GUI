@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author m16yusuf
+ * @author LimitMax
  */
 public class tambahAdmin extends javax.swing.JFrame {
 

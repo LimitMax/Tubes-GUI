@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author m16yusuf
+ * @author LimitMax
  */
 public class hapusAdmin extends javax.swing.JFrame {
 

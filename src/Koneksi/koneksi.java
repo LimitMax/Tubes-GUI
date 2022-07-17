@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ZUP_92
+ * @author LimitMax
  */
 public class koneksi {
      public String user     = "root";
