@@ -5,8 +5,10 @@
  */
 import Koneksi.koneksi;
 import Menu.Home;
+import com.jtattoo.plaf.aluminium.AluminiumLookAndFeel;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 
 public class Main extends javax.swing.JFrame {
@@ -35,6 +37,7 @@ public class Main extends javax.swing.JFrame {
         inIdAdmin = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
 
         jLabel1.setText("ID Admin   :");
 
@@ -161,6 +164,10 @@ public class Main extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                try {
+                    UIManager.setLookAndFeel(new AluminiumLookAndFeel());
+                } catch (Exception e) {
+                }
                 new Main().setVisible(true);
             }
         });
