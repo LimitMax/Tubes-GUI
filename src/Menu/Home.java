@@ -5,8 +5,12 @@
  */
 package Menu;
 import Admin.formAdmin;
+import Mapel.formMapel;
+import Nilai.formNilai;
 import java.awt.Dimension;
 import kelas.formKelas;
+import com.jtattoo.plaf.aluminium.AluminiumLookAndFeel;
+import javax.swing.UIManager;
 
 /**
  *
@@ -31,6 +35,8 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         showPane = new javax.swing.JDesktopPane();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuSiswa = new javax.swing.JMenuItem();
@@ -48,15 +54,37 @@ public class Home extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Geometr212 BkCn BT", 1, 24)); // NOI18N
+        jLabel1.setText("Selamat Datang Di Sistem Penilaian");
+
+        jLabel2.setFont(new java.awt.Font("DFPOP1-W9", 1, 36)); // NOI18N
+        jLabel2.setText("SDN Sindanghaji 3");
+
+        showPane.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        showPane.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout showPaneLayout = new javax.swing.GroupLayout(showPane);
         showPane.setLayout(showPaneLayout);
         showPaneLayout.setHorizontalGroup(
             showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 737, Short.MAX_VALUE)
+            .addGroup(showPaneLayout.createSequentialGroup()
+                .addGroup(showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(showPaneLayout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(showPaneLayout.createSequentialGroup()
+                        .addGap(182, 182, 182)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(539, Short.MAX_VALUE))
         );
         showPaneLayout.setVerticalGroup(
             showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGroup(showPaneLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(219, Short.MAX_VALUE))
         );
 
         jMenuBar1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
@@ -175,7 +203,6 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSiswaActionPerformed
         // TODO add your handling code here:
-      
     }//GEN-LAST:event_jMenuSiswaActionPerformed
 
     private void jMenuDataGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDataGuruActionPerformed
@@ -200,10 +227,34 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuPelajaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuPelajaranActionPerformed
         // TODO add your handling code here:
+        formMapel mapel = new formMapel();
+        
+        // ambil size screen dan size form mapel
+        Dimension layarutama = this.getSize();
+        Dimension layarmapel = mapel.getSize();
+        // set form mapel di tengah screen
+        mapel.setLocation(layarutama.width/2-layarmapel.width/2,layarutama.height/2-layarmapel.height/2);
+
+        // Menampilkan menu admin di dekstop pane
+        showPane.add(mapel);
+        mapel.setVisible(true);
+        mapel.tampilMapel();
     }//GEN-LAST:event_jMenuPelajaranActionPerformed
 
     private void jMenuNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuNilaiActionPerformed
         // TODO add your handling code here:
+        formNilai nilai = new formNilai();
+        
+        // ambil size screen dan size form admin
+        Dimension layarutama = this.getSize();
+        Dimension layaradmin = nilai.getSize();
+        // set form admin di tengah screen
+        nilai.setLocation(layarutama.width/2-layaradmin.width/2,layarutama.height/2-layaradmin.height/2);
+        
+        //show menu nilai
+        showPane.add(nilai);
+        nilai.setVisible(true);
+        nilai.tampilNilai();
     }//GEN-LAST:event_jMenuNilaiActionPerformed
 
     private void jMenuAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuAdminActionPerformed
@@ -261,6 +312,10 @@ public class Home extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                try {
+                    UIManager.setLookAndFeel(new AluminiumLookAndFeel());
+                } catch (Exception e) {
+                }
                 new Home().setVisible(true);
             }
         });
@@ -269,6 +324,8 @@ public class Home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu JmenuADmin;
     private javax.swing.JMenuItem JmenuLogout;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu5;
