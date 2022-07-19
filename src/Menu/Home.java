@@ -6,6 +6,7 @@
 package Menu;
 import Admin.formAdmin;
 import java.awt.Dimension;
+import kelas.formKelas;
 
 /**
  *
@@ -183,6 +184,18 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuKelasActionPerformed
         // TODO add your handling code here:
+        formKelas kelas = new formKelas();
+
+        // ambil size screen dan size form admin
+        Dimension layarutama = this.getSize();
+        Dimension layaradmin = kelas.getSize();
+        // set form admin di tengah screen
+        kelas.setLocation(layarutama.width/2-layaradmin.width/2,layarutama.height/2-layaradmin.height/2);
+
+        // Menampilkan menu admin di dekstop pane
+        showPane.add(kelas);
+        kelas.setVisible(true);
+        kelas.tampilKelas();
     }//GEN-LAST:event_jMenuKelasActionPerformed
 
     private void jMenuPelajaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuPelajaranActionPerformed
