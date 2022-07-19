@@ -184,7 +184,7 @@ public class ubahMapel extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             koneksi sambung = new koneksi();
-            String sql ="UPDATE mapel SET nama_mapel='"+ txtNamaMapel.getText() +"', tingkat='"+ txtTingkat.getText() +"', nip='"+ txtNIP.getText() +"' WHERE id_admin= '"+txtIDMapel.getText()+"' "; 
+            String sql ="UPDATE mapel SET nama_mapel='"+ txtNamaMapel.getText() +"', tingkat='"+ txtTingkat.getText() +"', nip='"+ txtNIP.getText() +"' WHERE id_mapel= '"+txtIDMapel.getText()+"' "; 
             sambung.stat.executeUpdate(sql);
             
             JOptionPane.showMessageDialog(null, "Data berhasil diubah");
