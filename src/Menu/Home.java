@@ -5,6 +5,7 @@
  */
 package Menu;
 import Admin.formAdmin;
+import Mapel.formMapel;
 import java.awt.Dimension;
 
 /**
@@ -174,7 +175,6 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSiswaActionPerformed
         // TODO add your handling code here:
-      
     }//GEN-LAST:event_jMenuSiswaActionPerformed
 
     private void jMenuDataGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDataGuruActionPerformed
@@ -187,6 +187,18 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuPelajaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuPelajaranActionPerformed
         // TODO add your handling code here:
+        formMapel mapel = new formMapel();
+        
+        // ambil size screen dan size form mapel
+        Dimension layarutama = this.getSize();
+        Dimension layarmapel = mapel.getSize();
+        // set form mapel di tengah screen
+        mapel.setLocation(layarutama.width/2-layarmapel.width/2,layarutama.height/2-layarmapel.height/2);
+
+        // Menampilkan menu admin di dekstop pane
+        showPane.add(mapel);
+        mapel.setVisible(true);
+        mapel.tampilMapel();
     }//GEN-LAST:event_jMenuPelajaranActionPerformed
 
     private void jMenuNilaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuNilaiActionPerformed
