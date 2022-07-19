@@ -27,18 +27,19 @@ public class formKelas extends javax.swing.JInternalFrame {
         initComponents();
     }
  public void tampilKelas(){
-        Object[] row = {"ID Kelas", "Kelas"}; 
+        Object[] row = {"ID Kelas", "Kelas","NIP Wali Kelas"}; 
         DefaultTableModel tabmodel = new DefaultTableModel(null,row);
         jTableKelas.setModel(tabmodel); 
         
         koneksi sambung = new koneksi();
         try{
-            String sql = "SELECT id_kelas,kelas FROM kelas";
+            String sql = "SELECT id_kelas,kelas,nip_walikelas FROM kelas";
             ResultSet res = sambung.stat.executeQuery(sql);
             while(res.next()){
                 String id_kelas = res.getString("id_kelas");
                 String kelas = res.getString("kelas");
-                String[] data = {id_kelas,kelas};
+                String nip_walikelas = res.getString("nip_walikelas");
+                String[] data = {id_kelas,kelas,nip_walikelas};
                 tabmodel.addRow(data);
             }
         }
