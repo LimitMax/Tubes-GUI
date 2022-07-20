@@ -51,6 +51,24 @@ public class editAdmin extends javax.swing.JFrame {
             }
         });
 
+        txtIdAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtIdAdminActionPerformed(evt);
+            }
+        });
+
+        txtNamaAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNamaAdminActionPerformed(evt);
+            }
+        });
+
+        txtPassAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPassAdminActionPerformed(evt);
+            }
+        });
+
         jLabel1.setText("ID Admin");
 
         jLabel2.setText("ID Admin");
@@ -182,6 +200,18 @@ public class editAdmin extends javax.swing.JFrame {
         txtNamaAdmin.setText("");
         txtPassAdmin.setText("");
     }//GEN-LAST:event_btnResetActionPerformed
+
+    private void txtIdAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtIdAdminActionPerformed
+
+    private void txtNamaAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNamaAdminActionPerformed
+
+    private void txtPassAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPassAdminActionPerformed
 
     /**
      * @param args the command line arguments
