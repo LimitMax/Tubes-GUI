@@ -6,6 +6,7 @@
 package Menu;
 import Admin.formAdmin;
 import java.awt.Dimension;
+import siswa.formSiswa;
 
 /**
  *
@@ -51,11 +52,11 @@ public class Home extends javax.swing.JFrame {
         showPane.setLayout(showPaneLayout);
         showPaneLayout.setHorizontalGroup(
             showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 737, Short.MAX_VALUE)
+            .addGap(0, 761, Short.MAX_VALUE)
         );
         showPaneLayout.setVerticalGroup(
             showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGap(0, 408, Short.MAX_VALUE)
         );
 
         jMenuBar1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
@@ -157,16 +158,11 @@ public class Home extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(showPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(showPane, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(showPane)
-                .addContainerGap())
+            .addComponent(showPane)
         );
 
         pack();
@@ -174,7 +170,18 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSiswaActionPerformed
         // TODO add your handling code here:
-      
+        formSiswa siswa = new formSiswa();
+
+        // ambil size screen dan size form admin
+        Dimension layarutama = this.getSize();
+        Dimension layarsiswa = siswa.getSize();
+        // set form admin di tengah screen
+        siswa.setLocation(layarutama.width/2-layarsiswa.width/2,layarutama.height/2-layarsiswa.height/2);
+
+        // Menampilkan menu admin di dekstop pane
+        showPane.add(siswa);
+        siswa.setVisible(true);
+        siswa.tampilSiswa();
     }//GEN-LAST:event_jMenuSiswaActionPerformed
 
     private void jMenuDataGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDataGuruActionPerformed

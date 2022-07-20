@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 public class koneksi {
      public String user     = "root";
     public String pass     = "";
-    public String db       = "db10120708Sekolah"; 
+    public String db       = "tubesgui"; 
     public String urlValue = "Jdbc:mysql://localhost:3306/"+db;
     public String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     public Connection con = null;
