@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Admin;
+
 import Menu.Home;
 import Koneksi.koneksi;
 import java.sql.*;
@@ -163,7 +164,8 @@ public class formAdmin extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TblEdit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(TblHapus))
+                .addComponent(TblHapus)
+                .addContainerGap())
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createTitledBorder(""), javax.swing.BorderFactory.createCompoundBorder()));
@@ -172,6 +174,12 @@ public class formAdmin extends javax.swing.JInternalFrame {
         TblCari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TblCariActionPerformed(evt);
+            }
+        });
+
+        txtCariAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCariAdminActionPerformed(evt);
             }
         });
 
@@ -293,6 +301,10 @@ public class formAdmin extends javax.swing.JInternalFrame {
         hapusAdmin hapus = new hapusAdmin();
         hapus.setVisible(true);
     }//GEN-LAST:event_TblHapusActionPerformed
+
+    private void txtCariAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCariAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCariAdminActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
