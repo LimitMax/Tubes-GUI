@@ -5,6 +5,7 @@
  */
 package Menu;
 import Admin.formAdmin;
+import Guru.formGuru;
 import java.awt.Dimension;
 
 /**
@@ -179,6 +180,18 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuDataGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDataGuruActionPerformed
         // TODO add your handling code here:
+        formGuru guru = new formGuru();
+
+        // ambil size screen dan size form admin
+        Dimension layarutama = this.getSize();
+        Dimension layarguru = guru.getSize();
+        // set form admin di tengah screen
+        guru.setLocation(layarutama.width/2-layarguru.width/2,layarutama.height/2-layarguru.height/2);
+
+        // Menampilkan menu admin di dekstop pane
+        showPane.add(guru);
+        guru.setVisible(true);
+        guru.tampilGuru();
     }//GEN-LAST:event_jMenuDataGuruActionPerformed
 
     private void jMenuKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuKelasActionPerformed
