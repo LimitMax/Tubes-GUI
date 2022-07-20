@@ -15,6 +15,7 @@ import java.awt.Dimension;
 import kelas.formKelas;
 import com.jtattoo.plaf.aluminium.AluminiumLookAndFeel;
 import javax.swing.UIManager;
+import siswa.formSiswa;
 
 /**
  *
@@ -207,6 +208,18 @@ public class Home extends javax.swing.JFrame {
 
     private void jMenuSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSiswaActionPerformed
         // TODO add your handling code here:
+        formSiswa siswa = new formSiswa();
+
+        // ambil size screen dan size form admin
+        Dimension layarutama = this.getSize();
+        Dimension layarsiswa = siswa.getSize();
+        // set form admin di tengah screen
+        siswa.setLocation(layarutama.width/2-layarsiswa.width/2,layarutama.height/2-layarsiswa.height/2);
+
+        // Menampilkan menu admin di dekstop pane
+        showPane.add(siswa);
+        siswa.setVisible(true);
+        siswa.tampilSiswa();
     }//GEN-LAST:event_jMenuSiswaActionPerformed
 
     private void jMenuDataGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDataGuruActionPerformed
