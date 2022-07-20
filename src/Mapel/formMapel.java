@@ -264,7 +264,7 @@ public class formMapel extends javax.swing.JInternalFrame {
         jTableMapel.setModel(tabmodel);
         koneksi sambung = new koneksi();
         try{
-            String sql = "SELECT id_mapel,nama_mapel,tingkat,nip FROM mapek WHERE id_mapel LIKE '%" 
+            String sql = "SELECT id_mapel,nama_mapel,tingkat,nip FROM mapel WHERE id_mapel LIKE '%" 
                     +txtCariMapel.getText()+ "%'" +"or nama_mapel LIKE '%" +txtCariMapel.getText()+ "%'";
             ResultSet res = sambung.stat.executeQuery(sql);
             while(res.next()){
