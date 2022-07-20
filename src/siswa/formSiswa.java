@@ -265,7 +265,7 @@ public class formSiswa extends javax.swing.JInternalFrame {
                 Date tanggal = res.getDate("tanggal");
                 String alamat = res.getString("alamat");
                 String id_kelas = res.getString("id_kelas");
-                Object[] data = {nis,nama_siswa,jk,tempat_lahir,tanggal,alamat,id_kelas};
+                Object [] data = {nis,nama_siswa,jk,tempat_lahir,tanggal,alamat,id_kelas};
                 tabmodel.addRow(data);
             }
         }

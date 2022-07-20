@@ -112,7 +112,7 @@ public class editSiswa extends javax.swing.JFrame {
             }
         });
 
-        txttanggal.setDateFormatString("yyyy-mm-dd");
+        txttanggal.setDateFormatString("yyyy-MM-dd");
         txttanggal.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 txttanggalPropertyChange(evt);

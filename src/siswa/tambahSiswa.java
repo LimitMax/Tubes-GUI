@@ -103,7 +103,7 @@ public class tambahSiswa extends javax.swing.JFrame {
 
         cbjk.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "laki-laki", "perempuan " }));
 
-        txttanggal.setDateFormatString("yyyy-mm-dd");
+        txttanggal.setDateFormatString("yyyy-MM-dd");
         txttanggal.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 txttanggalPropertyChange(evt);
@@ -216,16 +216,18 @@ public class tambahSiswa extends javax.swing.JFrame {
         String tampilan = "yyyy-MM-dd";
         SimpleDateFormat fm = new SimpleDateFormat(tampilan);
         String tanggal=String.valueOf(fm.format(txttanggal.getDate()));
+         
           try{
             
             koneksi sambung = new koneksi();
-            String sql ="INSERT INTO siswa VALUES('" +txtnis.getText()+ "','" +txtnama.getText()+"','" +cbjk.getSelectedItem()+"','" +txttempat.getText()+
+            String sql ="INSERT INTO siswa VALUES('" +txtnis.getText()+ "','" +txtnama.getText()+"','" + cbjk.getSelectedItem()+"','" +txttempat.getText()+
                     "','"+tanggal+"','" + txtalamat.getText()+"','" + cbkelas.getSelectedItem()+"')" ;
             sambung.stat.executeUpdate(sql);
+            
 
             JOptionPane.showMessageDialog(null, "Data berhasil di tambahkan");
             dispose();
-        
+               
         }
         catch (SQLException e){
             JOptionPane.showMessageDialog(this, e.getMessage());
