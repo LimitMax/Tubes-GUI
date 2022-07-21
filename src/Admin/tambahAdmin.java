@@ -38,9 +38,9 @@ public class tambahAdmin extends javax.swing.JFrame {
         txtaddidAdmin = new javax.swing.JTextField();
         txtaddnamaAdmin = new javax.swing.JTextField();
         txtaddpassAdmin = new javax.swing.JTextField();
-        btnaddAdmin = new javax.swing.JButton();
+        btnAddAdmin = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
-        btntutup = new javax.swing.JButton();
+        btnTutup = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,10 +59,10 @@ public class tambahAdmin extends javax.swing.JFrame {
             }
         });
 
-        btnaddAdmin.setText("Input");
-        btnaddAdmin.addActionListener(new java.awt.event.ActionListener() {
+        btnAddAdmin.setText("Input");
+        btnAddAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddAdminActionPerformed(evt);
+                btnAddAdminActionPerformed(evt);
             }
         });
 
@@ -73,10 +73,10 @@ public class tambahAdmin extends javax.swing.JFrame {
             }
         });
 
-        btntutup.setText("Tutup");
-        btntutup.addActionListener(new java.awt.event.ActionListener() {
+        btnTutup.setText("Tutup");
+        btnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btntutupActionPerformed(evt);
+                btnTutupActionPerformed(evt);
             }
         });
 
@@ -88,11 +88,11 @@ public class tambahAdmin extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btntutup)
+                        .addComponent(btnTutup)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                         .addComponent(btnReset)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnaddAdmin))
+                        .addComponent(btnAddAdmin))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -126,9 +126,9 @@ public class tambahAdmin extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnaddAdmin)
+                    .addComponent(btnAddAdmin)
                     .addComponent(btnReset)
-                    .addComponent(btntutup))
+                    .addComponent(btnTutup))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
 
@@ -140,10 +140,10 @@ public class tambahAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtaddidAdminActionPerformed
 
-    private void btntutupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntutupActionPerformed
+    private void btnTutupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTutupActionPerformed
         // TODO add your handling code here:
         dispose();
-    }//GEN-LAST:event_btntutupActionPerformed
+    }//GEN-LAST:event_btnTutupActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
@@ -152,7 +152,7 @@ public class tambahAdmin extends javax.swing.JFrame {
         txtaddpassAdmin.setText("");
     }//GEN-LAST:event_btnResetActionPerformed
 
-    private void btnaddAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddAdminActionPerformed
+    private void btnAddAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAdminActionPerformed
         // TODO add your handling code here:
         try{
             koneksi sambung = new koneksi();
@@ -166,7 +166,7 @@ public class tambahAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
             System.out.println("Koneksi Gagal "+e.toString());
         }
-    }//GEN-LAST:event_btnaddAdminActionPerformed
+    }//GEN-LAST:event_btnAddAdminActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,9 +174,9 @@ public class tambahAdmin extends javax.swing.JFrame {
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddAdmin;
     private javax.swing.JButton btnReset;
-    private javax.swing.JButton btnaddAdmin;
-    private javax.swing.JButton btntutup;
+    private javax.swing.JButton btnTutup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

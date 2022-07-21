@@ -60,19 +60,20 @@ public class formAdmin extends javax.swing.JInternalFrame {
         JTablebAdmin = new javax.swing.JTable();
         btnCloseAdmin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        TblRefresh = new javax.swing.JButton();
+        btnRefresh = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        TblTambah = new javax.swing.JButton();
-        TblEdit = new javax.swing.JButton();
-        TblHapus = new javax.swing.JButton();
+        btnTambah = new javax.swing.JButton();
+        btnEdit = new javax.swing.JButton();
+        btnHapus = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        TblCari = new javax.swing.JButton();
+        btnCari = new javax.swing.JButton();
         txtCariAdmin = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Admin");
 
         JTablebAdmin.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -115,33 +116,33 @@ public class formAdmin extends javax.swing.JInternalFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Daftar Admin");
 
-        TblRefresh.setText("Refresh");
-        TblRefresh.addActionListener(new java.awt.event.ActionListener() {
+        btnRefresh.setText("Refresh");
+        btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TblRefreshActionPerformed(evt);
+                btnRefreshActionPerformed(evt);
             }
         });
 
         jPanel1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createTitledBorder(""), javax.swing.BorderFactory.createCompoundBorder()));
 
-        TblTambah.setText("Tambah ");
-        TblTambah.addActionListener(new java.awt.event.ActionListener() {
+        btnTambah.setText("Tambah ");
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TblTambahActionPerformed(evt);
+                btnTambahActionPerformed(evt);
             }
         });
 
-        TblEdit.setText("Edit");
-        TblEdit.addActionListener(new java.awt.event.ActionListener() {
+        btnEdit.setText("Edit");
+        btnEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TblEditActionPerformed(evt);
+                btnEditActionPerformed(evt);
             }
         });
 
-        TblHapus.setText("Hapus");
-        TblHapus.addActionListener(new java.awt.event.ActionListener() {
+        btnHapus.setText("Hapus");
+        btnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TblHapusActionPerformed(evt);
+                btnHapusActionPerformed(evt);
             }
         });
 
@@ -152,28 +153,28 @@ public class formAdmin extends javax.swing.JInternalFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TblHapus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(TblEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(TblTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnHapus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnTambah, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(TblTambah)
+                .addComponent(btnTambah)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TblEdit)
+                .addComponent(btnEdit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(TblHapus)
+                .addComponent(btnHapus)
                 .addContainerGap())
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createTitledBorder(""), javax.swing.BorderFactory.createCompoundBorder()));
 
-        TblCari.setText("Cari");
-        TblCari.addActionListener(new java.awt.event.ActionListener() {
+        btnCari.setText("Cari");
+        btnCari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TblCariActionPerformed(evt);
+                btnCariActionPerformed(evt);
             }
         });
 
@@ -189,7 +190,7 @@ public class formAdmin extends javax.swing.JInternalFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(TblCari)
+                .addComponent(btnCari)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtCariAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -199,7 +200,7 @@ public class formAdmin extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TblCari)
+                    .addComponent(btnCari)
                     .addComponent(txtCariAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -217,7 +218,7 @@ public class formAdmin extends javax.swing.JInternalFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnCloseAdmin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TblRefresh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(btnRefresh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 183, Short.MAX_VALUE)
                         .addComponent(jLabel1)
@@ -234,7 +235,7 @@ public class formAdmin extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(TblRefresh)
+                        .addComponent(btnRefresh)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -246,11 +247,11 @@ public class formAdmin extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TblEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TblEditActionPerformed
+    private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
         // TODO add your handling code here:
         editAdmin edit = new editAdmin();
         edit.setVisible(true);
-    }//GEN-LAST:event_TblEditActionPerformed
+    }//GEN-LAST:event_btnEditActionPerformed
 
     private void btnCloseAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseAdminActionPerformed
         // TODO add your handling code here:
@@ -262,12 +263,12 @@ public class formAdmin extends javax.swing.JInternalFrame {
         tampilAdmin();
     }//GEN-LAST:event_JTablebAdminComponentShown
 
-    private void TblRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TblRefreshActionPerformed
+    private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         tampilAdmin();
-    }//GEN-LAST:event_TblRefreshActionPerformed
+    }//GEN-LAST:event_btnRefreshActionPerformed
 
-    private void TblCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TblCariActionPerformed
+    private void btnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariActionPerformed
         // TODO add your handling code here:
         Object[] row = {"ID Admin", "nama Admin"}; 
         DefaultTableModel tabmodel = new DefaultTableModel(null,row);
@@ -288,19 +289,19 @@ public class formAdmin extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
             System.out.println("Koneksi Gagal "+e.toString());
         }
-    }//GEN-LAST:event_TblCariActionPerformed
+    }//GEN-LAST:event_btnCariActionPerformed
 
-    private void TblTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TblTambahActionPerformed
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
         // TODO add your handling code here:
         tambahAdmin tambah = new tambahAdmin();
         tambah.setVisible(true);
-    }//GEN-LAST:event_TblTambahActionPerformed
+    }//GEN-LAST:event_btnTambahActionPerformed
 
-    private void TblHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TblHapusActionPerformed
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
         // TODO add your handling code here:
         hapusAdmin hapus = new hapusAdmin();
         hapus.setVisible(true);
-    }//GEN-LAST:event_TblHapusActionPerformed
+    }//GEN-LAST:event_btnHapusActionPerformed
 
     private void txtCariAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCariAdminActionPerformed
         // TODO add your handling code here:
@@ -309,12 +310,12 @@ public class formAdmin extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable JTablebAdmin;
-    private javax.swing.JButton TblCari;
-    private javax.swing.JButton TblEdit;
-    private javax.swing.JButton TblHapus;
-    private javax.swing.JButton TblRefresh;
-    private javax.swing.JButton TblTambah;
+    private javax.swing.JButton btnCari;
     private javax.swing.JButton btnCloseAdmin;
+    private javax.swing.JButton btnEdit;
+    private javax.swing.JButton btnHapus;
+    private javax.swing.JButton btnRefresh;
+    private javax.swing.JButton btnTambah;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

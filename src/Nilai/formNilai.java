@@ -66,9 +66,11 @@ public class formNilai extends javax.swing.JInternalFrame {
         btnTutup = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
+        setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Nilai");
 
         JTableNilai.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

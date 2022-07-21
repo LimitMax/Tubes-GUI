@@ -29,11 +29,11 @@
               <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="btntutup" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnTutup" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="54" max="32767" attributes="0"/>
                       <Component id="btnReset" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnaddAdmin" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAddAdmin" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -78,9 +78,9 @@
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnaddAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAddAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnReset" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btntutup" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnTutup" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="54" max="32767" attributes="0"/>
           </Group>
@@ -118,12 +118,12 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtaddpassAdmin">
     </Component>
-    <Component class="javax.swing.JButton" name="btnaddAdmin">
+    <Component class="javax.swing.JButton" name="btnAddAdmin">
       <Properties>
         <Property name="text" type="java.lang.String" value="Input"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnaddAdminActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddAdminActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnReset">
@@ -134,12 +134,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnResetActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btntutup">
+    <Component class="javax.swing.JButton" name="btnTutup">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tutup"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btntutupActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTutupActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -31,8 +31,8 @@ public class hapusAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btntutup = new javax.swing.JButton();
-        btnreset = new javax.swing.JButton();
+        btnTutup = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
         btnhapus = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txthapus = new javax.swing.JTextField();
@@ -40,17 +40,17 @@ public class hapusAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btntutup.setText("Tutup");
-        btntutup.addActionListener(new java.awt.event.ActionListener() {
+        btnTutup.setText("Tutup");
+        btnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btntutupActionPerformed(evt);
+                btnTutupActionPerformed(evt);
             }
         });
 
-        btnreset.setText("reset");
-        btnreset.addActionListener(new java.awt.event.ActionListener() {
+        btnReset.setText("reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnresetActionPerformed(evt);
+                btnResetActionPerformed(evt);
             }
         });
 
@@ -80,9 +80,9 @@ public class hapusAdmin extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btntutup)
+                        .addComponent(btnTutup)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnreset)
+                        .addComponent(btnReset)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnhapus))
                     .addGroup(layout.createSequentialGroup()
@@ -107,8 +107,8 @@ public class hapusAdmin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnhapus)
-                    .addComponent(btnreset)
-                    .addComponent(btntutup))
+                    .addComponent(btnReset)
+                    .addComponent(btnTutup))
                 .addGap(49, 49, 49))
         );
 
@@ -120,15 +120,15 @@ public class hapusAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txthapusActionPerformed
 
-    private void btntutupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btntutupActionPerformed
+    private void btnTutupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTutupActionPerformed
         // TODO add your handling code here:
         dispose();
-    }//GEN-LAST:event_btntutupActionPerformed
+    }//GEN-LAST:event_btnTutupActionPerformed
 
-    private void btnresetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnresetActionPerformed
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
         txthapus.setText("");
-    }//GEN-LAST:event_btnresetActionPerformed
+    }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnhapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnhapusActionPerformed
         // TODO add your handling code here:
@@ -147,9 +147,9 @@ public class hapusAdmin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnhapusActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnReset;
+    private javax.swing.JButton btnTutup;
     private javax.swing.JButton btnhapus;
-    private javax.swing.JButton btnreset;
-    private javax.swing.JButton btntutup;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField txthapus;

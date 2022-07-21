@@ -31,7 +31,7 @@ public class tambahNilai extends javax.swing.JFrame {
             
            while(res.next()){
                String jenis =res.getString("id_kelas");
-               CBKelas.addItem(jenis);
+               cbKelas.addItem(jenis);
            }    
         }
         catch (Exception e){
@@ -53,8 +53,8 @@ public class tambahNilai extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        CBTingkat = new javax.swing.JComboBox<>();
-        CBPelajaran = new javax.swing.JComboBox<>();
+        cbTingkat = new javax.swing.JComboBox<>();
+        cbPelajaran = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         labelIDPel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -62,8 +62,8 @@ public class tambahNilai extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
-        CBKelas = new javax.swing.JComboBox<>();
-        CBNamaSiswa = new javax.swing.JComboBox<>();
+        cbKelas = new javax.swing.JComboBox<>();
+        cbNamaSiswa = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -80,16 +80,16 @@ public class tambahNilai extends javax.swing.JFrame {
 
         jLabel6.setText("Nama Pelajaran");
 
-        CBTingkat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kelas 1", "Kelas 2", "Kelas 3", "Kelas 4", "Kelas 5", "Kelas 6" }));
-        CBTingkat.addActionListener(new java.awt.event.ActionListener() {
+        cbTingkat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kelas 1", "Kelas 2", "Kelas 3", "Kelas 4", "Kelas 5", "Kelas 6" }));
+        cbTingkat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBTingkatActionPerformed(evt);
+                cbTingkatActionPerformed(evt);
             }
         });
 
-        CBPelajaran.addActionListener(new java.awt.event.ActionListener() {
+        cbPelajaran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBPelajaranActionPerformed(evt);
+                cbPelajaranActionPerformed(evt);
             }
         });
 
@@ -120,9 +120,9 @@ public class tambahNilai extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtNilai, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CBTingkat, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cbTingkat, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 84, Short.MAX_VALUE))
-                            .addComponent(CBPelajaran, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(cbPelajaran, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -135,12 +135,12 @@ public class tambahNilai extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CBTingkat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbTingkat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(4, 4, 4)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(CBPelajaran, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbPelajaran, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -154,15 +154,15 @@ public class tambahNilai extends javax.swing.JFrame {
 
         jLabel8.setText("Siswa :");
 
-        CBKelas.addActionListener(new java.awt.event.ActionListener() {
+        cbKelas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBKelasActionPerformed(evt);
+                cbKelasActionPerformed(evt);
             }
         });
 
-        CBNamaSiswa.addActionListener(new java.awt.event.ActionListener() {
+        cbNamaSiswa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CBNamaSiswaActionPerformed(evt);
+                cbNamaSiswaActionPerformed(evt);
             }
         });
 
@@ -188,8 +188,8 @@ public class tambahNilai extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelNis, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CBNamaSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CBKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbNamaSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(39, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -199,17 +199,17 @@ public class tambahNilai extends javax.swing.JFrame {
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CBKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
                 .addGap(11, 11, 11)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(CBNamaSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbNamaSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(labelNis))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         btnAddNilai.setText("Submit");
@@ -308,31 +308,31 @@ public class tambahNilai extends javax.swing.JFrame {
         txtNilai.setText("");
     }//GEN-LAST:event_btnResetActionPerformed
 
-    private void CBKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBKelasActionPerformed
+    private void cbKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbKelasActionPerformed
         // TODO add your handling code here:
         koneksi sambung = new koneksi();
         try{
-            String sql="select * from siswa WHERE id_kelas='"+CBKelas.getSelectedItem()+"' ";
+            String sql="select * from siswa WHERE id_kelas='"+cbKelas.getSelectedItem()+"' ";
             ResultSet res = sambung.stat.executeQuery(sql);
 
-            CBNamaSiswa.removeAllItems();
+            cbNamaSiswa.removeAllItems();
 
             while(res.next()){
                 String jenis =res.getString("nama_siswa");
-                CBNamaSiswa.addItem(jenis);
+                cbNamaSiswa.addItem(jenis);
             }
         }
         catch (Exception e){
             JOptionPane.showMessageDialog(this, e.getMessage());
             System.out.println("Koneksi Gagal "+e.toString());
         }
-    }//GEN-LAST:event_CBKelasActionPerformed
+    }//GEN-LAST:event_cbKelasActionPerformed
 
-    private void CBNamaSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBNamaSiswaActionPerformed
+    private void cbNamaSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbNamaSiswaActionPerformed
         // TODO add your handling code here:
         koneksi sambung = new koneksi();
         try{
-            String sql = "SELECT * FROM siswa WHERE nama_siswa= '"+ CBNamaSiswa.getSelectedItem() +"' ";
+            String sql = "SELECT * FROM siswa WHERE nama_siswa= '"+ cbNamaSiswa.getSelectedItem() +"' ";
             ResultSet res = sambung.stat.executeQuery(sql);
             while(res.next()){
                 String nis = res.getString("nis");
@@ -343,80 +343,80 @@ public class tambahNilai extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
             System.out.println("Koneksi Gagal "+e.toString());
         } 
-    }//GEN-LAST:event_CBNamaSiswaActionPerformed
+    }//GEN-LAST:event_cbNamaSiswaActionPerformed
 
-    private void CBTingkatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBTingkatActionPerformed
+    private void cbTingkatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTingkatActionPerformed
         // TODO add your handling code here:
         koneksi sambung = new koneksi();
         int tingkat = 0;
-        if(CBTingkat.getSelectedItem()=="Kelas 1"){
+        if(cbTingkat.getSelectedItem()=="Kelas 1"){
             tingkat = 1;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 2"){
+        if (cbTingkat.getSelectedItem()=="Kelas 2"){
             tingkat = 2;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 3"){
+        if (cbTingkat.getSelectedItem()=="Kelas 3"){
             tingkat = 3;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 4"){
+        if (cbTingkat.getSelectedItem()=="Kelas 4"){
             tingkat = 4;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 5"){
+        if (cbTingkat.getSelectedItem()=="Kelas 5"){
             tingkat = 5;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 6"){
+        if (cbTingkat.getSelectedItem()=="Kelas 6"){
             tingkat = 6;
         }
         try{
             String sql="select * from mapel WHERE tingkat='"+tingkat+"' ";
             ResultSet res = sambung.stat.executeQuery(sql);
 
-            CBPelajaran.removeAllItems();
+            cbPelajaran.removeAllItems();
             while(res.next()){
                 String jenis =res.getString("nama_mapel");
-                CBPelajaran.addItem(jenis);
+                cbPelajaran.addItem(jenis);
             }
         }
         catch (Exception e){
             JOptionPane.showMessageDialog(this, e.getMessage());
             System.out.println("Koneksi Gagal "+e.toString());
         }
-    }//GEN-LAST:event_CBTingkatActionPerformed
+    }//GEN-LAST:event_cbTingkatActionPerformed
 
-    private void CBPelajaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBPelajaranActionPerformed
+    private void cbPelajaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPelajaranActionPerformed
         // TODO add your handling code here:
         koneksi sambung = new koneksi();
         int tingkat = 0;
-        if(CBTingkat.getSelectedItem()=="Kelas 1"){
+        if(cbTingkat.getSelectedItem()=="Kelas 1"){
             tingkat = 1;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 2"){
+        if (cbTingkat.getSelectedItem()=="Kelas 2"){
             tingkat = 2;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 3"){
+        if (cbTingkat.getSelectedItem()=="Kelas 3"){
             tingkat = 3;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 4"){
+        if (cbTingkat.getSelectedItem()=="Kelas 4"){
             tingkat = 4;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 5"){
+        if (cbTingkat.getSelectedItem()=="Kelas 5"){
             tingkat = 5;
         }
         else
-        if (CBTingkat.getSelectedItem()=="Kelas 6"){
+        if (cbTingkat.getSelectedItem()=="Kelas 6"){
             tingkat = 6;
         }
         try{
-           String sql = "SELECT * FROM mapel WHERE nama_mapel= '"+ CBPelajaran.getSelectedItem() +"' and tingkat='"+tingkat+"' ";
+           String sql = "SELECT * FROM mapel WHERE nama_mapel= '"+ cbPelajaran.getSelectedItem() +"' and tingkat='"+tingkat+"' ";
             ResultSet res = sambung.stat.executeQuery(sql);
             while(res.next()){
                 String id_mapel = res.getString("id_mapel");
@@ -427,7 +427,7 @@ public class tambahNilai extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e.getMessage());
             System.out.println("Koneksi Gagal "+e.toString());
         } 
-    }//GEN-LAST:event_CBPelajaranActionPerformed
+    }//GEN-LAST:event_cbPelajaranActionPerformed
 
     /**
      * @param args the command line arguments
@@ -435,13 +435,13 @@ public class tambahNilai extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> CBKelas;
-    private javax.swing.JComboBox<String> CBNamaSiswa;
-    private javax.swing.JComboBox<String> CBPelajaran;
-    private javax.swing.JComboBox<String> CBTingkat;
     private javax.swing.JButton btnAddNilai;
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnTutup;
+    private javax.swing.JComboBox<String> cbKelas;
+    private javax.swing.JComboBox<String> cbNamaSiswa;
+    private javax.swing.JComboBox<String> cbPelajaran;
+    private javax.swing.JComboBox<String> cbTingkat;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

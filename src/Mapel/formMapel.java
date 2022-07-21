@@ -69,6 +69,11 @@ public class formMapel extends javax.swing.JInternalFrame {
         txtCariMapel = new javax.swing.JTextField();
         btnCari = new javax.swing.JButton();
 
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setTitle("Mata Pelajaran");
+
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
