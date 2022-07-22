@@ -5,15 +5,18 @@
         <group>
             <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Main/Main.java</file>
             <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Admin/formAdmin.java</file>
-            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Guru/formGuru.java</file>
             <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Nilai/tambahNilai.java</file>
-            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/kelas/tambahKelas.java</file>
+            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Admin/editAdmin.java</file>
+            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Admin/tambahAdmin.java</file>
             <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Menu/Home.java</file>
             <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Nilai/formNilai.java</file>
-            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/siswa/tambahSiswa.java</file>
-            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/kelas/formKelas.java</file>
-            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Mapel/formMapel.java</file>
+            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/siswa/editSiswa.java</file>
+            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Admin/hapusAdmin.java</file>
+            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Laporan/frmLaporan.java</file>
             <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/siswa/formSiswa.java</file>
+            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/siswa/hapusSiswa.java</file>
+            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/siswa/tambahSiswa.java</file>
+            <file>file:/E:/Developer/Java%20GUI/Tubes-GUI/src/Nilai/hapusNilai.java</file>
         </group>
     </open-files>
 </project-private>
