@@ -59,13 +59,15 @@ public class tambahAdmin extends javax.swing.JFrame {
             }
         });
 
-        btnAddAdmin.setText("Input");
+        btnAddAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/submit.png"))); // NOI18N
+        btnAddAdmin.setText("Submit");
         btnAddAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddAdminActionPerformed(evt);
             }
         });
 
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/reset.png"))); // NOI18N
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +75,7 @@ public class tambahAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnTutup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
         btnTutup.setText("Tutup");
         btnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,7 +92,7 @@ public class tambahAdmin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnTutup)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnReset)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnAddAdmin))
@@ -129,7 +132,7 @@ public class tambahAdmin extends javax.swing.JFrame {
                     .addComponent(btnAddAdmin)
                     .addComponent(btnReset)
                     .addComponent(btnTutup))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         setSize(new java.awt.Dimension(375, 306));

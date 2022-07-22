@@ -30,7 +30,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="btnTutup" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="54" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="btnReset" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnAddAdmin" min="-2" max="-2" attributes="0"/>
@@ -82,7 +82,7 @@
                   <Component id="btnReset" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnTutup" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="54" max="32767" attributes="0"/>
+              <EmptySpace pref="76" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -120,7 +120,10 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnAddAdmin">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Input"/>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/submit.png"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddAdminActionPerformed"/>
@@ -128,6 +131,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnReset">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/reset.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Reset"/>
       </Properties>
       <Events>
@@ -136,6 +142,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnTutup">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/close.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Tutup"/>
       </Properties>
       <Events>

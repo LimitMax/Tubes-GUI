@@ -40,6 +40,7 @@ public class hapusAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnTutup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
         btnTutup.setText("Tutup");
         btnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +48,7 @@ public class hapusAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/reset.png"))); // NOI18N
         btnReset.setText("reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +56,7 @@ public class hapusAdmin extends javax.swing.JFrame {
             }
         });
 
+        btnhapus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/submit.png"))); // NOI18N
         btnhapus.setText("Submit");
         btnhapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

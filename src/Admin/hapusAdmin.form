@@ -74,6 +74,9 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnTutup">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/close.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Tutup"/>
       </Properties>
       <Events>
@@ -82,6 +85,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnReset">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/reset.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="reset"/>
       </Properties>
       <Events>
@@ -90,6 +96,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnhapus">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/submit.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Submit"/>
       </Properties>
       <Events>

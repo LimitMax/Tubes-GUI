@@ -137,6 +137,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="btnRefresh">
       <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/img/refresh.png"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Refresh"/>
       </Properties>
       <Events>
@@ -189,6 +192,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnTambah">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/plus.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Tambah "/>
           </Properties>
           <Events>
@@ -197,6 +203,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnEdit">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/edit.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Edit"/>
           </Properties>
           <Events>
@@ -205,6 +214,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="btnHapus">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/trash.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Hapus"/>
           </Properties>
           <Events>
@@ -257,6 +269,9 @@
       <SubComponents>
         <Component class="javax.swing.JButton" name="btnCari">
           <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/img/search.png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Cari"/>
           </Properties>
           <Events>
