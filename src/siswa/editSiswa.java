@@ -35,7 +35,7 @@ public class editSiswa extends javax.swing.JFrame {
             
            while(res.next()){
                String jenis =res.getString("id_kelas");
-               cbKelas.addItem(jenis);
+               CBKelas.addItem(jenis);
            }    
         }
         catch (Exception e){
@@ -55,30 +55,31 @@ public class editSiswa extends javax.swing.JFrame {
 
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        txtaddNiss = new javax.swing.JTextField();
+        JdateLahir = new com.toedter.calendar.JDateChooser();
+        txtNISBaru = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        txtaddNama = new javax.swing.JTextField();
-        cbKelas = new javax.swing.JComboBox<>();
+        txtNama = new javax.swing.JTextField();
+        CBKelas = new javax.swing.JComboBox<>();
         btnTutup = new javax.swing.JButton();
         btnEditSiswa = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
-        txtaddAlamat = new javax.swing.JTextField();
+        txtAlamat = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtaddTL = new javax.swing.JTextField();
+        txtTempatLahir = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         cbJenisKelamin = new javax.swing.JComboBox<>();
         jLabel10 = new javax.swing.JLabel();
-        txttanggal = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txteditNIS = new javax.swing.JTextField();
+        txtNISLama = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel3.setText("Edit Siswa");
 
         jLabel5.setText("Nama Siswa ");
@@ -96,7 +97,7 @@ public class editSiswa extends javax.swing.JFrame {
             }
         });
 
-        btnEditSiswa.setText("Submit");
+        btnEditSiswa.setText("Edit");
         btnEditSiswa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditSiswaActionPerformed(evt);
@@ -118,13 +119,6 @@ public class editSiswa extends javax.swing.JFrame {
 
         jLabel10.setText("Jenis Kelamin");
 
-        txttanggal.setDateFormatString("yyyy-MM-dd");
-        txttanggal.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                txttanggalPropertyChange(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -134,50 +128,44 @@ public class editSiswa extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5)
                             .addComponent(jLabel9)
                             .addComponent(jLabel10)
                             .addComponent(jLabel2))
-                        .addGap(69, 69, 69)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtaddNiss, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtaddNama)
-                            .addComponent(txtaddTL, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txttanggal, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel4))
                         .addGap(67, 67, 67)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNISBaru, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtNama)
+                            .addComponent(txtAlamat)
+                            .addComponent(txtTempatLahir, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(cbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(txtaddAlamat))))
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(87, 87, 87)
-                .addComponent(btnTutup)
-                .addGap(44, 44, 44)
-                .addComponent(btnReset)
-                .addGap(50, 50, 50)
-                .addComponent(btnEditSiswa)
-                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(JdateLahir, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(CBKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 114, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(btnTutup)
+                        .addGap(43, 43, 43)
+                        .addComponent(btnReset)
+                        .addGap(46, 46, 46)
+                        .addComponent(btnEditSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtaddNiss, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNISBaru, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtaddNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -185,26 +173,26 @@ public class editSiswa extends javax.swing.JFrame {
                     .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtaddTL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTempatLahir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txttanggal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JdateLahir, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(txtaddAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(cbKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnTutup)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CBKelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnReset)
+                    .addComponent(btnTutup)
                     .addComponent(btnEditSiswa))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel7.setText("NIS");
@@ -218,13 +206,13 @@ public class editSiswa extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                .addComponent(txteditNIS, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(txtNISLama, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(86, 86, 86)
                 .addComponent(jLabel8)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -232,7 +220,7 @@ public class editSiswa extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txteditNIS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNISLama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -250,7 +238,7 @@ public class editSiswa extends javax.swing.JFrame {
                             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(193, 193, 193)
+                        .addGap(208, 208, 208)
                         .addComponent(jLabel3)))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
@@ -265,7 +253,7 @@ public class editSiswa extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(527, 398));
+        setSize(new java.awt.Dimension(527, 402));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -276,18 +264,16 @@ public class editSiswa extends javax.swing.JFrame {
 
     private void btnEditSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditSiswaActionPerformed
         // TODO add your handling code here:
-        String tampilan = "yyyy-MM-dd";
-        SimpleDateFormat fm = new SimpleDateFormat(tampilan);
-        String tanggal=String.valueOf(fm.format(txttanggal.getDate()));
         koneksi sambung = new koneksi();
 
         try{
-            String sql ="UPDATE siswa SET nis='" +txtaddNiss.getText()+ "', nama_siswa='" 
-                    + txtaddNama.getText()+  "', jk='" + cbJenisKelamin.getSelectedItem()
-                    + "',tempat_lahir='" + txtaddTL + "', tanggal='" 
-                    +tanggal + "', alamat='" + txtaddAlamat.getText()
-                    + "',id_kelas='"+ cbKelas.getSelectedItem() + "' WHERE nis='"
-                    +txteditNIS.getText()+"' ";
+            String sql ="UPDATE siswa SET nis='" +txtNISBaru.getText()+ "', nama_siswa='" 
+                    + txtNama.getText() +  "', jk='" + cbJenisKelamin.getSelectedItem() + "', tempat_lahir='"
+                    + txtTempatLahir.getText() +"', tanggal='"
+                    + tglinput.format(JdateLahir.getDate())+"', alamat='"
+                    +txtAlamat.getText()+"', id_kelas='"+ CBKelas.getSelectedItem() +
+                    "' WHERE nis='"
+                    +txtNISLama.getText()+"' ";
             sambung.stat.executeUpdate(sql);
 
             JOptionPane.showMessageDialog(null, "Data berhasil di Update");
@@ -301,26 +287,26 @@ public class editSiswa extends javax.swing.JFrame {
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
-        txteditNIS.setText("");
-        txtaddNiss.setText("");
-        txtaddNama.setText("");
-        txttanggal.setDateFormatString("");
+        txtNISLama.setText("");
+        txtNISBaru.setText("");
+        txtNama.setText("");
+        cbJenisKelamin.setSelectedItem("");
+        txtTempatLahir.setText("");
+        JdateLahir.setDateFormatString("");
+        txtAlamat.setText("");
     }//GEN-LAST:event_btnResetActionPerformed
-
-    private void txttanggalPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_txttanggalPropertyChange
-
-    }//GEN-LAST:event_txttanggalPropertyChange
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CBKelas;
+    private com.toedter.calendar.JDateChooser JdateLahir;
     private javax.swing.JButton btnEditSiswa;
     private javax.swing.JButton btnReset;
     private javax.swing.JButton btnTutup;
     private javax.swing.JComboBox<String> cbJenisKelamin;
-    private javax.swing.JComboBox<String> cbKelas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -333,11 +319,10 @@ public class editSiswa extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtaddAlamat;
-    private javax.swing.JTextField txtaddNama;
-    private javax.swing.JTextField txtaddNiss;
-    private javax.swing.JTextField txtaddTL;
-    private javax.swing.JTextField txteditNIS;
-    private com.toedter.calendar.JDateChooser txttanggal;
+    private javax.swing.JTextField txtAlamat;
+    private javax.swing.JTextField txtNISBaru;
+    private javax.swing.JTextField txtNISLama;
+    private javax.swing.JTextField txtNama;
+    private javax.swing.JTextField txtTempatLahir;
     // End of variables declaration//GEN-END:variables
 }
