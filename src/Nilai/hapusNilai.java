@@ -48,6 +48,7 @@ public class hapusNilai extends javax.swing.JFrame {
 
         jLabel1.setText("ID Nilai");
 
+        btnTutup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
         btnTutup.setText("Tutup");
         btnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -55,6 +56,7 @@ public class hapusNilai extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/reset.png"))); // NOI18N
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +64,7 @@ public class hapusNilai extends javax.swing.JFrame {
             }
         });
 
+        btnHapusNilai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/submit.png"))); // NOI18N
         btnHapusNilai.setText("Submit");
         btnHapusNilai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +115,7 @@ public class hapusNilai extends javax.swing.JFrame {
                     .addComponent(btnTutup)
                     .addComponent(btnReset)
                     .addComponent(btnHapusNilai))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         pack();

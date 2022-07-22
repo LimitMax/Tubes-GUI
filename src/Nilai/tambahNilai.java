@@ -26,11 +26,11 @@ public class tambahNilai extends javax.swing.JFrame {
     private void cbKelasMethod(){
         koneksi sambung = new koneksi();
         try{
-            String sql="select id_kelas from kelas";
+            String sql="select kelas from kelas";
             ResultSet res = sambung.stat.executeQuery(sql);
             
            while(res.next()){
-               String jenis =res.getString("id_kelas");
+               String jenis =res.getString("kelas");
                cbKelas.addItem(jenis);
            }    
         }
@@ -80,7 +80,7 @@ public class tambahNilai extends javax.swing.JFrame {
 
         jLabel6.setText("Nama Pelajaran");
 
-        cbTingkat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kelas 1", "Kelas 2", "Kelas 3", "Kelas 4", "Kelas 5", "Kelas 6" }));
+        cbTingkat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pilih Tingkat", "IPA", "IPS", "BAHASA" }));
         cbTingkat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbTingkatActionPerformed(evt);
@@ -168,7 +168,7 @@ public class tambahNilai extends javax.swing.JFrame {
 
         jLabel9.setText("NIS");
 
-        jLabel10.setText("Kelas Siswa");
+        jLabel10.setText("ID Kelas");
 
         jLabel11.setText("Nama Siswa");
 
@@ -212,6 +212,7 @@ public class tambahNilai extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnAddNilai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/submit.png"))); // NOI18N
         btnAddNilai.setText("Submit");
         btnAddNilai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,6 +220,7 @@ public class tambahNilai extends javax.swing.JFrame {
             }
         });
 
+        btnReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/reset.png"))); // NOI18N
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,6 +228,7 @@ public class tambahNilai extends javax.swing.JFrame {
             }
         });
 
+        btnTutup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/close.png"))); // NOI18N
         btnTutup.setText("Tutup");
         btnTutup.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,7 +270,7 @@ public class tambahNilai extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnAddNilai)
@@ -312,7 +315,7 @@ public class tambahNilai extends javax.swing.JFrame {
         // TODO add your handling code here:
         koneksi sambung = new koneksi();
         try{
-            String sql="select * from siswa WHERE id_kelas='"+cbKelas.getSelectedItem()+"' ";
+            String sql="select * FROM siswa NATURAL JOIN kelas WHERE kelas.kelas='"+cbKelas.getSelectedItem()+"' ";
             ResultSet res = sambung.stat.executeQuery(sql);
 
             cbNamaSiswa.removeAllItems();
@@ -348,30 +351,19 @@ public class tambahNilai extends javax.swing.JFrame {
     private void cbTingkatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTingkatActionPerformed
         // TODO add your handling code here:
         koneksi sambung = new koneksi();
-        int tingkat = 0;
-        if(cbTingkat.getSelectedItem()=="Kelas 1"){
-            tingkat = 1;
+        String tingkat = "";
+        if(cbTingkat.getSelectedItem()=="IPA"){
+            tingkat = "IPA";
         }
         else
-        if (cbTingkat.getSelectedItem()=="Kelas 2"){
-            tingkat = 2;
+        if (cbTingkat.getSelectedItem()=="IPS"){
+            tingkat = "IPS";
         }
         else
-        if (cbTingkat.getSelectedItem()=="Kelas 3"){
-            tingkat = 3;
+        if (cbTingkat.getSelectedItem()=="BAHASA"){
+            tingkat = "BAHASA";
         }
-        else
-        if (cbTingkat.getSelectedItem()=="Kelas 4"){
-            tingkat = 4;
-        }
-        else
-        if (cbTingkat.getSelectedItem()=="Kelas 5"){
-            tingkat = 5;
-        }
-        else
-        if (cbTingkat.getSelectedItem()=="Kelas 6"){
-            tingkat = 6;
-        }
+        
         try{
             String sql="select * from mapel WHERE tingkat='"+tingkat+"' ";
             ResultSet res = sambung.stat.executeQuery(sql);
@@ -391,29 +383,17 @@ public class tambahNilai extends javax.swing.JFrame {
     private void cbPelajaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPelajaranActionPerformed
         // TODO add your handling code here:
         koneksi sambung = new koneksi();
-        int tingkat = 0;
-        if(cbTingkat.getSelectedItem()=="Kelas 1"){
-            tingkat = 1;
+         String tingkat = "";
+        if(cbTingkat.getSelectedItem()=="IPA"){
+            tingkat = "IPA";
         }
         else
-        if (cbTingkat.getSelectedItem()=="Kelas 2"){
-            tingkat = 2;
+        if (cbTingkat.getSelectedItem()=="IPS"){
+            tingkat = "IPS";
         }
         else
-        if (cbTingkat.getSelectedItem()=="Kelas 3"){
-            tingkat = 3;
-        }
-        else
-        if (cbTingkat.getSelectedItem()=="Kelas 4"){
-            tingkat = 4;
-        }
-        else
-        if (cbTingkat.getSelectedItem()=="Kelas 5"){
-            tingkat = 5;
-        }
-        else
-        if (cbTingkat.getSelectedItem()=="Kelas 6"){
-            tingkat = 6;
+        if (cbTingkat.getSelectedItem()=="BAHASA"){
+            tingkat = "BAHASA";
         }
         try{
            String sql = "SELECT * FROM mapel WHERE nama_mapel= '"+ cbPelajaran.getSelectedItem() +"' and tingkat='"+tingkat+"' ";
