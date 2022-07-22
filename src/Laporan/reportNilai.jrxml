@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="69537b6e-76eb-47ef-bc1d-06ad8c21a889">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="87"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT siswa.nis,siswa.nama_siswa,mapel.nama_mapel,nilai.nilai FROM siswa INNER JOIN (mapel INNER JOIN nilai ON nilai.id_mapel = mapel.id_mapel) ON nilai.nis = siswa.nis;]]>
+	</queryString>
+	<field name="nis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_siswa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_mapel" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nilai" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="276" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="311" y="40" width="185" height="24" uuid="84330bfd-ebc4-4665-872d-34d637261d6b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="18" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[DINAS PENDIDIKAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="235" y="87" width="325" height="28" uuid="d4d133c1-ddb2-46e4-b086-e084458a16e5"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="24" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[SMA NEGERI 1 JATIWANGI
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="266" y="63" width="265" height="24" uuid="3db14859-3fd6-4a1c-91c2-97debfe25cee"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="18" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[CABANG DINAS PENDIDIKAN WILAYAH IX]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="200" y="0" width="435" height="62" uuid="cc724bda-4c78-47b1-b34d-f337dc58ab4c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="18" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[PEMERINTAH DAERAH PROVINSI JAWA BARAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="135" y="115" width="532" height="81" uuid="f3e04075-ca5a-4b01-af83-26ef671de07d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Jl Raya Timur No. 02 Telp (0233) 881623/8886064 Jatiwangi 45454
+Email: smanjatiwangi.gmail.com website : www.sman1jatiwangi.sch.id
+NPSN : 20213885 NSS : 30 1 02 16 10 005]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Title" x="300" y="213" width="231" height="28" uuid="790c00bd-c541-4266-8089-dbaaf2d9ed82"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="24" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[DATA NILAI SISWA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="fee752ce-6a81-433c-92b7-735a6fe62de3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="0" width="200" height="15" forecolor="#736343" uuid="19f8889c-8c68-4446-8cf8-50748b312c9c"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="200" y="0" width="200" height="15" forecolor="#736343" uuid="c52692fd-f2d1-45bb-9526-d35764e7ce37"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NAMA SISWA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="400" y="0" width="200" height="15" forecolor="#736343" uuid="844ea63b-7572-4815-a017-e95695ef0cd3"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NAMA MAPEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="600" y="0" width="200" height="15" forecolor="#736343" uuid="b9c3a275-cc66-4693-8f36-24fb104cd07a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NILAI]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="7c77b6ad-5e45-4bd1-9ee0-03da1067ca80"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="0" y="0" width="200" height="15" uuid="b26cf817-aaa1-4de8-b364-95af7764e337"/>
+					<textFieldExpression><![CDATA[$F{nis}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="200" y="0" width="200" height="15" uuid="9daf496f-22b7-400f-8ebf-9ac1b790a90b"/>
+					<textFieldExpression><![CDATA[$F{nama_siswa}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="400" y="0" width="200" height="15" uuid="649133c7-b2ce-42ea-8376-a12f7913e2c0"/>
+					<textFieldExpression><![CDATA[$F{nama_mapel}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" x="600" y="0" width="200" height="15" uuid="1ac13780-c20e-49ad-96ff-142ac522a086"/>
+					<textFieldExpression><![CDATA[$F{nilai}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="60c0a167-ba9a-4b09-b652-e73eb8e34c63"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="c8aa4f96-7342-4883-a782-66dfd831df3f"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="1e1c5e1f-54c2-4813-acee-d941e4265412"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="306bca54-e2b9-40e7-8f8c-177fc3a014f7"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="8ac3102c-d44a-456e-b3ad-db63d9de2bb7"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
