@@ -7,15 +7,16 @@ package Menu;
 import Admin.formAdmin;
 
 import Guru.formGuru;
+import Laporan.frmLaporan;
 
 import Mapel.formMapel;
 import Nilai.formNilai;
+import siswa.formSiswa;
 
 import java.awt.Dimension;
 import kelas.formKelas;
 import com.jtattoo.plaf.aluminium.AluminiumLookAndFeel;
 import javax.swing.UIManager;
-import siswa.formSiswa;
 
 /**
  *
@@ -42,6 +43,7 @@ public class Home extends javax.swing.JFrame {
         showPane = new javax.swing.JDesktopPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuSiswa = new javax.swing.JMenuItem();
@@ -53,55 +55,62 @@ public class Home extends javax.swing.JFrame {
         jMenuPelajaran = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenuNilai = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuLaporan = new javax.swing.JMenuItem();
         JmenuADmin = new javax.swing.JMenu();
         jMenuAdmin = new javax.swing.JMenuItem();
         JmenuLogout = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Home");
-        setSize(new java.awt.Dimension(700, 1100));
-
-        showPane.setPreferredSize(new java.awt.Dimension(700, 1100));
 
         jLabel1.setFont(new java.awt.Font("Geometr212 BkCn BT", 1, 24)); // NOI18N
         jLabel1.setText("Selamat Datang Di Sistem Penilaian");
 
         jLabel2.setFont(new java.awt.Font("DFPOP1-W9", 1, 36)); // NOI18N
-        jLabel2.setText("SDN Sindanghaji 3");
+        jLabel2.setText("SMA NEGERI 1 JATIWANGI");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logoSma.png"))); // NOI18N
 
         showPane.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         showPane.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        showPane.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout showPaneLayout = new javax.swing.GroupLayout(showPane);
         showPane.setLayout(showPaneLayout);
         showPaneLayout.setHorizontalGroup(
             showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, showPaneLayout.createSequentialGroup()
-                .addContainerGap(372, Short.MAX_VALUE)
+            .addGroup(showPaneLayout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(jLabel3)
+                .addGap(96, 96, 96)
                 .addGroup(showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(showPaneLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(341, 341, 341))
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(464, Short.MAX_VALUE))
         );
         showPaneLayout.setVerticalGroup(
             showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(showPaneLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(394, Short.MAX_VALUE))
+                .addGroup(showPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(showPaneLayout.createSequentialGroup()
+                        .addGap(91, 91, 91)
+                        .addComponent(jLabel3))
+                    .addGroup(showPaneLayout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         jMenuBar1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jMenuBar1.setMaximumSize(new java.awt.Dimension(32769, 32769));
 
         jMenu1.setText("Siswa");
         jMenu1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
 
-        jMenuSiswa.setText("data Siswa");
+        jMenuSiswa.setText("Data Siswa");
         jMenuSiswa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuSiswaActionPerformed(evt);
@@ -163,6 +172,19 @@ public class Home extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu6);
 
+        jMenu3.setText("Laporan");
+        jMenu3.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+
+        jMenuLaporan.setText("Buat Laporan");
+        jMenuLaporan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuLaporanActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuLaporan);
+
+        jMenuBar1.add(jMenu3);
+
         JmenuADmin.setText("Admin");
         JmenuADmin.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         JmenuADmin.addActionListener(new java.awt.event.ActionListener() {
@@ -197,14 +219,14 @@ public class Home extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(showPane, javax.swing.GroupLayout.DEFAULT_SIZE, 1155, Short.MAX_VALUE)
-                .addGap(20, 20, 20))
+                .addComponent(showPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(showPane, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(showPane)
+                .addContainerGap())
         );
 
         pack();
@@ -213,17 +235,18 @@ public class Home extends javax.swing.JFrame {
     private void jMenuSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuSiswaActionPerformed
         // TODO add your handling code here:
         formSiswa siswa = new formSiswa();
-
-        // ambil size screen dan size form admin
+        
+         // ambil size screen dan size form admin
         Dimension layarutama = this.getSize();
-        Dimension layarsiswa = siswa.getSize();
+        Dimension layarguru = siswa.getSize();
         // set form admin di tengah screen
-        siswa.setLocation(layarutama.width/2-layarsiswa.width/2,layarutama.height/2-layarsiswa.height/2);
+        siswa.setLocation(layarutama.width/2-layarguru.width/2,layarutama.height/2-layarguru.height/2);
 
         // Menampilkan menu admin di dekstop pane
         showPane.add(siswa);
         siswa.setVisible(true);
         siswa.tampilSiswa();
+        
     }//GEN-LAST:event_jMenuSiswaActionPerformed
 
     private void jMenuDataGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuDataGuruActionPerformed
@@ -315,6 +338,21 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_JmenuADminActionPerformed
 
+    private void jMenuLaporanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuLaporanActionPerformed
+        // TODO add your handling code here:
+        frmLaporan laporan = new frmLaporan();
+        
+        // ambil size screen dan size form admin
+        Dimension layarutama = this.getSize();
+        Dimension layaradmin = laporan.getSize();
+        // set form admin di tengah screen
+        laporan.setLocation(layarutama.width/2-layaradmin.width/2,layarutama.height/2-layaradmin.height/2);
+
+        // Menampilkan menu admin di dekstop pane
+        showPane.add(laporan);
+        laporan.setVisible(true);   
+    }//GEN-LAST:event_jMenuLaporanActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -341,6 +379,7 @@ public class Home extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Home.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -359,8 +398,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JMenuItem JmenuLogout;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenu jMenu7;
@@ -368,6 +409,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuDataGuru;
     private javax.swing.JMenuItem jMenuKelas;
+    private javax.swing.JMenuItem jMenuLaporan;
     private javax.swing.JMenuItem jMenuNilai;
     private javax.swing.JMenuItem jMenuPelajaran;
     private javax.swing.JMenuItem jMenuSiswa;
